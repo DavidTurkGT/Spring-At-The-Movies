@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Now Playing</title>
+</head>
+<body>
+    <h1>Here are all the movies that are playing</h1>
+    <ul>
+        <li th:each="movie : ${movies}">
+            <div>
+                <img th:src="${movie.poster_path}" alt=""/>
+                <h3 th:text="${movie.title}"></h3>
+                <h5>Popularity: <span th:text="${movie.popularity}"></span></h5>
+                <p><b>Overview: </b> <span th:text="${movie.overview}"></span></p>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
